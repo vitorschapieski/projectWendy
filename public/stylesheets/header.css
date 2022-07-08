@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'WT';
+    src: url('/fonts/lemon_milk/LEMONMILK-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    box-sizing: border-box;
+    position: fixed;
+    margin-left: 2.5vw;
+    width: 95vw;
+    max-width: 100vw;
+    height: 100px;
+    max-height: 110px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: black solid 1px;
+    color: #000;
+    font-size: .8rem;
+}
+
+/*LOGO*/
+
+
+.logoName {
+    font-family: 'WT', 'Times New Roman', Times, serif;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.logoName:hover {
+    color: rgba(255, 166, 0, 0.938);
+    font-size: 35px;
+}
+
+
+/*Botoes*/
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.links {
+    display: flex;
+}
+
+.btn {
+    font-size: .9rem;
+    padding: 10px;
+    transition: 1s;
+    border: 2px;
+}
+
+.btn:hover{
+    border-top:  3px solid #000;
+    background-color: rgba(255, 166, 0, 0.938);
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-family: 'WT', 'Times New Roman', Times, serif;
+}
+
+/* Configuraçao dos botoes para mobile*/
+
+#btn-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #btn-mobile {
+        display: block;
+        border: none;
+        background: none;
+    }
+    #menu {
+        display: none;
+        position: absolute;
+        right: 0px;
+        width: 100%;
+    }
+    #nav.active #menu {
+        display: flex;
+        justify-content: center;
+        top: 111px;
+        z-index: 10000;
+        background-color: transparent;
+    }
+    .menu-icon {
+        height: 30px;
+        width: 30px;
+        transition: 1s;
+    }
+    #nav.active .menu-icon {
+        transform: rotate(-90deg);
+    }
+    
+}

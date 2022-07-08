@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wendy Taylor</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/header.css' />
+  </head>
+  <body>
+    <!- HEADER ->
+    <%- include('./partials/header') %> 
+
+    <div class="conteiner">
+
+      <img src="/images/banner.png" alt="">
+
+    </div>
+
+    <!- LOGIN ->
+    <div id="modal-login" class="modal-container">
+
+      <div class="modal-card">
+        <form action="" method="post">
+          <button href="/" class="exit">x</button>
+          <h1>Login :D</h1>
+          <div class="label-float">
+            <input type="text" id="usuario" placeholder="">
+            <label for="usuario">Usuario</label>
+          </div>
+
+          <div class="label-float">
+            <input type="password" id="senha" placeholder="">
+            <label for="usuario">Senha</label>
+          </div>
+
+          <div class="justify-center">
+            <button>Entrar</button>
+          </div>
+
+          <div class="justify-center">
+            <hr>
+          </div>
+
+          <p>Não tem uma conta?
+            <a href="">Cadastre-se!</a>
+          </p>
+      </form>
+      </div>
+
+    </div>
+
+  </body>
+<script src="javascripts/header.js"></script>
+<script src="javascripts/modalLogin.js"></script>
+</html>
