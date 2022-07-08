@@ -5,13 +5,53 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/index.css' />
     <link rel='stylesheet' href='/stylesheets/header.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
   </head>
   <body>
     
+    <div id="modal-login" class="modal-container">
+
+        <div class="modal-card">
+          <form method="post">
+            <h1>Cadastre-se</h1>
+
+            <div class="label-float">
+                <input type="text" id="nome" placeholder="" required>
+                <label for="nome">Nome</label>
+            </div>
+
+            <div class="label-float">
+              <input type="text" id="usuario" placeholder="" required>
+              <label for="usuario">Usuario</label>
+            </div>
     
+            <div class="label-float">
+              <input type="password" id="senha" placeholder="" required>
+              <label for="senha">Senha</label>
+              <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <div class="label-float">
+                <input type="password" id="senha" placeholder="" required>
+                <label for="confirmeSenha">Confirme a Senha</label>
+            </div>
+    
+            <div class="justify-center">
+              <button>Cadastrar</button>
+            </div>
+    
+            <div class="justify-center">
+              <hr>
+            </div>
+    
+            <p>Já tem uma conta?
+              <a href="/login">Faça login!</a>
+            </p>
+        </form>
+        </div>
     
 
   </body>
 <script src="javascripts/header.js"></script>
-<script src="javascripts/modalLogin.js"></script>
+<script src="javascripts/user.js"></script>
 </html>

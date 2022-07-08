@@ -130,7 +130,8 @@ h1 {
     transition: all .3s ease-out;
 }
 
-.label-float input:focus + label {
+.label-float input:focus + label,
+.label-float input:valid + label {
     font-size: 13px;
     margin-top: 0;
 }
@@ -179,4 +180,10 @@ hr{
 
 .modal-container.mostrar {
     display: flex;
+}
+
+.fa-eye {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
 }
