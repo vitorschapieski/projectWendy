@@ -60,7 +60,7 @@
     left: 0px;
     background-color: rgba(0, 0, 0, 0.301);
     z-index: 11000;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
