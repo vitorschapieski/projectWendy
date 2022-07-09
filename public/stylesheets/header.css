@@ -9,17 +9,18 @@ header {
     box-sizing: border-box;
     position: fixed;
     margin-left: 2.5vw;
-    width: 95vw;
+    width: 95%;
     max-width: 100vw;
     height: 100px;
     max-height: 110px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.384);
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-bottom: black solid 1px;
     color: #000;
     font-size: .8rem;
+    z-index: 20000;
 }
 
 /*LOGO*/
@@ -32,7 +33,7 @@ header {
 }
 
 .logoName:hover {
-    color: rgba(255, 166, 0, 0.938);
+    color: rgba(240, 183, 227, 0.938);
     font-size: 35px;
 }
 
@@ -56,9 +57,10 @@ li {
 }
 
 .btn:hover{
-    border-top:  3px solid #000;
-    background-color: rgba(255, 166, 0, 0.938);
+    border-top:  3px solid rgba(0, 0, 0, 0.116);
+    background-color: rgba(134, 127, 114, 0.178);
     font-size: 1rem;
+    border-radius: 20px;
     color: rgb(0, 0, 0);
     font-family: 'WT', 'Times New Roman', Times, serif;
 }

@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Wendy Taylor</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/index.css' />
     <link rel='stylesheet' href='/stylesheets/header.css' />
   </head>
@@ -10,9 +9,33 @@
     <!- HEADER ->
     <%- include('./partials/header') %> 
 
-    <div class="conteiner">
+    <div class="i-conteiner">
 
+      <div class="i-top"></div>
+
+      <div class="i-left">
+        <% for(let produto of produtos){ %>
+          
+            <div class="l-card">  
+              <div class="l-imagem">
+                <img src="images/<%=produto.img%>" alt="<%=produto.alt%>">
+                <h2><%= produto.nome %></h2>
+              </div>
+              <div class="l-texto">
+                <a href=""></a>
+                
+                <br><p> <%=produto.texto%> </p><br>
+                <label class="l-label"><a>Cod:<%=produto.cod%></a></label>   
+              </div> 
+            </div>      
+        <% } %>  
+      </div>
+        
       
+
+      <div class="i-rigth">
+
+      </div>
 
     </div>
 
