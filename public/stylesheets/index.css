@@ -92,7 +92,7 @@ a {
     position: relative;
     width: 195px;
     height: 250px;
-    top: -18px;
+    top: -60px;
     left: 0px;
     z-index: 50;
 }
@@ -110,6 +110,7 @@ a {
     height: 200px;
     width: 200px;
     border-radius: 24px;
+    box-shadow: 10px 5px 30px 1px #000;
 }
 
 .i-left .l-card .l-texto{
@@ -128,6 +129,60 @@ a {
     cursor: pointer;
 
 }
+
+/* SECAO PRODUTOS*/
+
+#p-produtos{
+    width: 95%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    height: 1200px;
+    border-bottom: black solid 1px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Footer */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+}
+
+.f-id{
+    position: static;
+}
+
+footer .f-a{
+    font-size: 13px;
+    color: rgba(128, 128, 128, 0.452);
+    transition: .6s ease-in-out;
+}
+
+footer .f-a:hover{
+    font-size: 14px;
+    color: pink;
+    text-shadow: 2px 2px 2px 0 #000;
+}
+
+footer p{
+    font-family: 'WT', Arial, Helvetica, sans-serif;
+}
+
+footer span{
+    font-size: 13px;
+    color: rgba(128, 128, 128, 0.452);
+}
+
+
+/* MEDIAS */
+
 
 @media(max-width: 600px){
     .i-conteiner{
@@ -156,5 +211,8 @@ a {
     }
     .i-left .l-card{
         margin: 15px 15px;
+    }
+    .i-left .l-card .l-imagem{
+        top: -40px;
     }
 }
