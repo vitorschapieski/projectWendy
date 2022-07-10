@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>po</title>
+    <link rel="stylesheet" href="stylesheets/perfil.css">
+    <title id="titulo"></title>
 </head>
 <body>
-    <a id="u-sair">oi</a>
+    <label for="#painel"></label>
+    <div class="left" id="id-left">
+        <div class="person">
+            <label for="picture__input" class="picture" >
+                <span class="picture__image"></span>
+                </label>
+                <input type="file" accept="image/*" id="picture__input">
+                <div class="personNames">
+                    <h2 id="nomeUsuario">Nome</h2>
+                <p id="funcaoUsuario">Função</p>
+                <a id="u-sair">sair</a>
+                </div>
+                 
+        </div>
+        
+
+        <nav>
+            <ul>
+                
+                <li><a href="#inicio"> Inicio</a></li>
+                <li><a href="#produto">Produtos</a></li>
+                <li><a href="#painel"> Painel</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+    <div class="right" id="id-right">
+        <div id="inicio">
+            <p>Olá <h8 id="nomeUsuario2">n</h8>, está é uma pagina teste para o projetoWendy, aqui sera o painel de controle do adm do site, para adicionar e excluir produtos, e tera  tambem, um perfil para os usuarios adicionar produtos em seu carrinho!</p>
+            <label for="#painel"></label> 
+        </div>
+        <div id="produtos">
+            <%for(let produto of lista){ %> 
+                <div id="produto">
+                    <div class="img"><img src="images/<%=produto.img%>" alt="<%=produto.alt%>"></div>
+                    <h5><%=produto.nome%></h5>
+                    <p><%=produto.texto%></p>
+                    <p>R$<%=produto.valor%></p>
+                    <p>Cod:<%=produto.cod%></p>
+
+                </div>
+                <%}%>
+        </div>
+        <div id="painel">
+
+        </div>
+
+    </div>
+
+
+
+
+    
 </body>
 <script src="javascripts/userPage.js"></script>
 </html>

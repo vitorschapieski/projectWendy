@@ -53,15 +53,10 @@ btnLogin.addEventListener('click', () => {
         msgError.innerHTML = ''
         usuario.focus()
     } else if(usuario.value == userValid.user && senha.value == userValid.senha){
-
         window.location.href='/usuario'
-
         let token = Math.random().toString(5).substring(2)
         localStorage.setItem('token', token)
-
-
-
-
+        localStorage.setItem('userLogado', JSON.stringify(userValid))
     } else{
         userLabel.innerHTML = 'Usuario'
         usuario.setAttribute('style', 'border-color: red', 'color: red')

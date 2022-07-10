@@ -23,7 +23,7 @@ const userController = {
         res.render('index', {produtos:listaProdutos})
     },
     indexUser: (req, res) => [
-        res.render('usuario')
+        res.render('usuario', {lista:listaProdutos})
     ]
 }
 
