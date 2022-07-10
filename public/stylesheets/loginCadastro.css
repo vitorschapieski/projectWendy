@@ -9,7 +9,6 @@
     background-image: url('/images/bg3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 11000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,11 +39,6 @@
         transform: translate(0, 0, 0);
     }
 }
-
-.mostrar .modal-card{
-    animation: modal-card .3s;
-}
-
 
 h1 {
     text-align: center;
@@ -93,7 +87,7 @@ h1 {
     margin-top: 0;
 }
 
-.justify-center button{
+.justify-center #btnCad, #btnLogin{
     background-color: transparent;
     border: solid 1px black;
     padding: 12px;
@@ -107,13 +101,14 @@ h1 {
 
 }
 
-.justify-center button:hover {
+.justify-center #btnCad:hover, #btnLogin:hover {
     border: none;
     border-top:  3px solid #000;
     background-color: rgba(205, 148, 216, 0);
     font-size: 1rem;
     color: rgb(0, 0, 0);
     font-family: 'WT', 'Times New Roman', Times, serif;
+    
 }
 
 .justify-center {
@@ -142,4 +137,24 @@ hr{
     position: absolute;
     right: 5px;
     cursor: pointer;
+}
+
+#msgError{
+    text-align: center;
+    color: red;
+    background-color: #ffbbbb;
+    border-radius: 5px;
+    display: none;
+    font-size: 12px;
+    padding: 22px;
+}
+
+#msgSucess{
+    text-align: center;
+    color: green;
+    background-color: #c1ffbb;
+    border-radius: 5px;
+    display: none;
+    font-size: 12px;
+    padding: 22px;
 }

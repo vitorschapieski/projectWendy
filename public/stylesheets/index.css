@@ -143,22 +143,21 @@ a {
 
 
 /* Footer */
-
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.id-footer{
     padding: 12px;
     gap: 10px;
     flex-wrap: wrap;
-    position: absolute;
     bottom: 0;
+    text-align: center;
+    width: 100%;
 }
 
-.f-id{
-    position: static;
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
-
 footer .f-a{
     font-size: 13px;
     color: rgba(128, 128, 128, 0.452);
@@ -179,8 +178,10 @@ footer span{
     font-size: 13px;
     color: rgba(128, 128, 128, 0.452);
 }
-
-
+.f-cad{
+    position: absolute;
+    bottom: 0%;
+}
 /* MEDIAS */
 
 

@@ -21,7 +21,10 @@ const userController = {
     },
     indexHome: (req, res) => {
         res.render('index', {produtos:listaProdutos})
-    }
+    },
+    indexUser: (req, res) => [
+        res.render('usuario')
+    ]
 }
 
 

@@ -15,6 +15,9 @@
           <form method="post">
             <h1>Cadastre-se</h1>
 
+            <div id="msgError"></div>
+            <div id="msgSucess"></div>
+
             <div class="label-float">
                 <input type="text" id="nome" placeholder="" required>
                 <label id="labelNome" for="nome">Nome</label>
@@ -32,12 +35,12 @@
             </div>
 
             <div class="label-float">
-                <input type="password" id="confirmSenha" placeholder="" required>
-                <label id="labelConfirmSenha" for="confirmeSenha">Confirme a Senha</label>
+                <input type="password" id="confirmeSenha" placeholder="" required>
+                <label id="labelConfirmeSenha" for="confirmeSenha">Confirme a Senha</label>
             </div>
     
             <div class="justify-center">
-              <button onclick="cadastrar()">Cadastrar</button>
+              <a id="btnCad">Cadastrar</a>
             </div>
     
             <div class="justify-center">
@@ -49,9 +52,9 @@
             </p>
         </form>
         </div>
-    
-        <%- include('./partials/footer.ejs') %> 
+    <div class="id-footer f-cad">
+      <%- include('./partials/footer.ejs') %>
+    </div>
   </body>
-<script src="javascripts/header.js"></script>
 <script src="javascripts/user.js"></script>
 </html>
