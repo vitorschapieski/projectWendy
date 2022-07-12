@@ -33,7 +33,7 @@ const frase = document.querySelector('#i-frase')
 const textArray = ["Alegria", "Amor", "Felicidade", "Taylor"];
 const typingDelay = 200;
 const erasingDelay = 100;
-const newTextDelay = 500; // Delay between current and next text
+const newTextDelay = 500; 
 let textArrayIndex = 0;
 let charIndex = 0;
 
@@ -66,6 +66,23 @@ function erase() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+document.addEventListener("DOMContentLoaded", function() { 
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+//FOTO DE USUARIO NA HOME
+let foto = document.getElementById('nav-menu-img');
+let bntLogin = document.querySelector('#btn-login');
+let bntCad = document.querySelector('#btn-cad');
+let nomeUser = document.querySelector('#nome-User')
+
+let userLogado = JSON.parse(localStorage.getItem('userLogado'))
+
+if(localStorage.getItem('userLogado') == null){
+  foto.setAttribute('Style', 'display:none')
+} else{
+  foto.setAttribute('Style', 'display:block')
+  bntLogin.setAttribute('Style', 'display:none')
+  bntCad.setAttribute('Style', 'display:none')
+  nomeUser.innerHTML = userLogado.nome
+}

@@ -39,14 +39,41 @@ header {
 
 
 /*Botoes*/
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 li {
     text-decoration: none;
     list-style: none;
+    background-color: transparent;
 }
 
 .links {
     display: flex;
+}
+/*FOTO DA HOME E NOME*/
+#nav-menu-img{
+    height: 50px;
+    border-radius: 50%;
+}
+#nav-menu-img:hover{
+    border: 1px solid gray;
+    box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.507);
+}
+.li-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 15px;
+    cursor: pointer;
+}
+#nome-User{
+    font-size: 16px;
 }
 
 .btn {
@@ -71,6 +98,14 @@ li {
     display: none;
 }
 
+
+
+
+
+
+/* Teste */
+
+
 @media (max-width: 600px) {
     #btn-mobile {
         display: block;
@@ -80,7 +115,7 @@ li {
     #menu {
         display: none;
         position: absolute;
-        right: 0px;
+        right: 100px;
         width: 100%;
     }
     #nav.active #menu {

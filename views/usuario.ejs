@@ -5,20 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/perfil.css">
-    <title id="titulo"></title>
+    <title id="nomeUsuario2"></title>
 </head>
 <body>
     <label for="#painel"></label>
     <div class="left" id="id-left">
         <div class="person">
-            <label for="picture__input" class="picture" >
+                <label for="picture__input" class="picture" >
                 <span class="picture__image"></span>
                 </label>
                 <input type="file" accept="image/*" id="picture__input">
                 <div class="personNames">
                     <h2 id="nomeUsuario">Nome</h2>
                 <p id="funcaoUsuario">Função</p>
-                <a id="u-sair">sair</a>
                 </div>
                  
         </div>
@@ -26,18 +25,43 @@
 
         <nav>
             <ul>
-                
-                <li><a href="#inicio"> Inicio</a></li>
+                <li><a href="/"> Inicio</a></li>
+                <li><a href="#id-left"> Perfil</a></li>
                 <li><a href="#produto">Produtos</a></li>
                 <li><a href="#painel"> Painel</a></li>
+                <li><a id="u-sair">sair</a></li>
             </ul>
         </nav>
         
     </div>
     <div class="right" id="id-right">
         <div id="inicio">
-            <p>Olá <h8 id="nomeUsuario2">n</h8>, está é uma pagina teste para o projetoWendy, aqui sera o painel de controle do adm do site, para adicionar e excluir produtos, e tera  tambem, um perfil para os usuarios adicionar produtos em seu carrinho!</p>
-            <label for="#painel"></label> 
+
+            <div class="addProduto">
+
+                <p id="formMsg">Adicione um novo produto!</p>
+            
+                <form action="/usuario" method="POST">
+                    <div class="label-float">
+                        <input type="text" id="formNome" placeholder="" maxlength="20" required>
+                        <label for="formNome" id="formNomeLabel">Nome do produto</label>
+                    </div>
+                    <div class="label-float">
+                        <textarea name="" id="formTexto" cols="30" rows="10" maxlength="150" required></textarea>
+                        <label for="formTexto" id="formTextoLabel">Texto de informações</label>
+                    </div>
+                    <div class="label-float">
+                        <input type="number" id="formValor" placeholder="" maxlength="7" required>
+                        <label for="formValor" id="formValorLabel">Valor</label>
+                    </div>
+                    <div class="label-float">
+                        <input  type="number" id="formCod" placeholder="" maxlength="8" required>
+                        <label for="formCod" id="formCodLabel">Codigo</label>
+                    </div>
+                    <input  class="btn-add" type="submit" value="Adicionar">
+                </form>
+            </div>
+
         </div>
         <div id="produtos">
             <%for(let produto of lista){ %> 
@@ -52,8 +76,8 @@
                 <%}%>
         </div>
         <div id="painel">
+            
 
-        </div>
 
     </div>
 
