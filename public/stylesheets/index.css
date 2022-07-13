@@ -1,182 +1,274 @@
-.conteiner {
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0%;
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-style: inherit;
+    color: inherit;
+}
+
+
+
+/* BODY - Divisoes da pagina */
+
+.i-conteiner {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 1200px;
     margin: 0 auto;
     width: 95%;
-}
-
-.conteiner img {
-    width: auto;
-    max-height: 400px;
-    min-width: 320px;
-    border-radius: 30px;
-}
-
-.conteiner img:hover {
-    transition: 1s;
-}
-
-@media(max-width:450px){
-    .conteiner img {
-        margin-top: -80px;
-    }
-
-}
-
-@media(max-width:350px){
-    .conteiner img {
-        margin-top: -120px;
-    }
-
-}
-
-/* LOGIN */
-
-.exit {
-    position: absolute;
-    top: -15px;
-    right: 0px;
-    background-color: rgba(255, 255, 255, 0.596);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    color: #000;
-    font-size: 20px;
-    transition: all .6s ease-out;
-    cursor: pointer;
-}
-.exit:hover{
-    background-color:rgba(255, 166, 0, 0.938);    
-}
-
-.modal-container {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.301);
-    z-index: 11000;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-card {
+    background-color: rgb(255, 255, 255);
     position: relative;
-    min-width: 300px;
-    background-color: #ffffff90;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 5px 4px 1px 0px #00000050;
+    flex-wrap: wrap;
 }
 
-@keyframes modal-card {
-    from{
-        opacity: 0;
-        transform: translate(0, -60px, 0);
-    }
-    to{
-        opacity: 1;
-        transform: translate(0, 0, 0);
-    }
-}
-
-.mostrar .modal-card{
-    animation: modal-card .3s;
-}
-
-
-h1 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: rgba(0, 0, 0, 0.801);
-}
-
-.label-float input {
+.i-top {
+    background-color: rgb(255, 255, 255);
     width: 100%;
-    padding: 5px;
-    display: inline-block; /*NADA MAIS OCUPA A LINHA APENAS ESTE OBJETO*/
-    border: 0;
-    border-bottom: 1px solid black;
-    background: transparent;
-    outline: none;
-    min-width: 180px;
-    font-size: 15px;
-    transition: all .3s ease-out;
-    border-radius: 0;
-}
-
-.label-float {
-    position: relative;
-    padding-top: 13px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.label-float input:focus {
-    border-bottom: 2px solid black;
-}
-
-.label-float label {
-    pointer-events: none;
+    height: 110px;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 13px;
-    transition: all .3s ease-out;
+    top: 0%;
+    left: 0%;
 }
 
-.label-float input:focus + label {
-    font-size: 13px;
-    margin-top: 0;
-}
-
-.justify-center button{
-    background-color: transparent;
-    border: solid 1px black;
-    padding: 12px;
-    font-weight: 8px;
-    font-size: 1rem;
-    margin-top: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: none;
-    transition: all .3s ease-out;
-
-}
-
-.justify-center button:hover {
-    border: none;
-    border-top:  3px solid #000;
-    background-color: rgba(255, 166, 0, 0.938);
-    font-size: 1rem;
-    color: rgb(0, 0, 0);
-    font-family: 'WT', 'Times New Roman', Times, serif;
-}
-
-.justify-center {
+.i-left {
+    border-radius: 30px 0 0 30px;
+    background-image: url(/images/bg3.jpg);
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    width: 60%;
+    height: calc(100% - 110px);
+    left: 0%;
+    position: absolute;
+    top: 110px;
+    transition: .6s ease;
     display: flex;
+    align-items: auto;
     justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
-hr{
-    margin-top: 10%;
+::-webkit-scrollbar{
+    width: 2px;
+    background-color: transparent;
 }
 
-.modal-card a {
-    font-weight: bold;
-    transition: all .3s ease-out;
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
 }
 
-.modal-card a:hover {
-    color: rgba(255, 166, 0, 0.938);
-    box-shadow: 5px 4px 1px 0px #00000050;
-}
-
-.modal-container.mostrar {
+.i-rigth { 
+    width: 40%;
+    height: calc(100% - 110px);
+    right: 0%;
+    position: absolute;
+    top: 110px;
+    transition: .6s ease;
     display: flex;
+    align-items: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    overflow: none
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.container p span.typed-text {
+  font-weight: normal;
+  color: #ce2264;
+}
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+
+
+/* Cards de produtos */
+
+
+.i-left .l-card {
+    width: 225px;
+    max-width: 400px;
+    height: 220px;
+    position: relative;
+    margin: 90px 10px;
+    padding: 20px 15px;
+    background-color: #fff;
+    border-radius: 25px;
+    flex-direction: column;
+    transition: .6s ease-in-out;
+}
+
+.i-left .l-card:hover{
+    height: 400px;
+}
+
+.i-left .l-card .l-imagem{
+    position: relative;
+    width: 195px;
+    height: 250px;
+    top: -60px;
+    left: 0px;
+    z-index: 50;
+}
+
+.i-left .l-card .l-imagem h2{
+    position: relative;
+    top: -10%;
+    font-family: 'WT', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.i-left .l-card .l-imagem img{
+    max-width: 100%;
+    height: 200px;
+    width: 200px;
+    border-radius: 24px;
+    box-shadow: 10px 5px 30px 1px #000;
+}
+
+.i-left .l-card .l-texto{
+    position: relative;
+    margin-top: -75px;
+    text-align: center;
+    padding: 10px;
+    visibility: hidden;
+    transition: .4s ease-in-out;
+    font-size: 13px;
+}
+
+.i-left .l-card:hover .l-texto{
+    visibility: visible;
+    transition-delay: .3s;
+    cursor: pointer;
+
+}
+
+/* SECAO PRODUTOS*/
+
+#p-produtos{
+    width: 95%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    height: 1200px;
+    border-bottom: black solid 1px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Footer */
+.id-footer{
+    padding: 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+footer .f-a{
+    font-size: 13px;
+    color: rgba(128, 128, 128, 0.452);
+    transition: .6s ease-in-out;
+}
+
+footer .f-a:hover{
+    font-size: 14px;
+    color: pink;
+    text-shadow: 2px 2px 2px 0 #000;
+}
+
+footer p{
+    font-family: 'WT', Arial, Helvetica, sans-serif;
+}
+
+footer span{
+    font-size: 13px;
+    color: rgba(128, 128, 128, 0.452);
+}
+.f-cad{
+    position: absolute;
+    bottom: 0%;
+}
+/* MEDIAS */
+
+
+@media(max-width: 600px){
+    .i-conteiner{
+        top: 35px;
+    }
+}
+
+@media(max-width: 1000px){
+    .i-conteiner {
+        display: grid;
+        grid-template-rows: 60% 40%;
+        grid-template-columns: 1fr;
+        
+    }
+    .i-left {
+        width: 100%;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        border-radius: 30px 30px 0 0;
+    }
+    .i-rigth {
+        width: 100%;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        top: 0%;
+    }
+    .i-rigth:hover{
+        border-top: 1px solid black;
+    }
+    .i-left .l-card{
+        margin: 15px 15px;
+    }
+    .i-left .l-card .l-imagem{
+        top: -40px;
+    }
 }

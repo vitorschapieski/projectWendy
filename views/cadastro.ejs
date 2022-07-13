@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wendy Taylor - Cadastre se</title>
+    <link rel='stylesheet' href='/stylesheets/loginCadastro.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/header.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  </head>
+  <body>
+    
+    <div id="modal-login" class="modal-container modal-container-cad">
+
+        <div class="modal-card">
+          <form method="post">
+            <h1>Cadastre-se</h1>
+
+            <div id="msgError"></div>
+            <div id="msgSucess"></div>
+
+            <div class="label-float">
+                <input type="text" id="nome" placeholder="" required>
+                <label id="labelNome" for="nome">Nome</label>
+            </div>
+
+            <div class="label-float">
+              <input type="text" id="usuario" placeholder="" required>
+              <label id="labelUsuario" for="usuario">Usuario</label>
+            </div>
+    
+            <div class="label-float">
+              <input type="password" id="senha" placeholder="" required>
+              <label id="labelSenha" for="senha">Senha</label>
+              <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <div class="label-float">
+                <input type="password" id="confirmeSenha" placeholder="" required>
+                <label id="labelConfirmeSenha" for="confirmeSenha">Confirme a Senha</label>
+            </div>
+    
+            <div class="justify-center">
+              <a id="btnCad">Cadastrar</a>
+            </div>
+    
+            <div class="justify-center">
+              <hr>
+            </div>
+    
+            <p>Já tem uma conta?
+              <a href="/login">Faça login!</a>
+            </p>
+        </form>
+        </div>
+    <div class="id-footer f-cad">
+      <%- include('./partials/footer.ejs') %>
+    </div>
+  </body>
+<script src="javascripts/user.js"></script>
+</html>

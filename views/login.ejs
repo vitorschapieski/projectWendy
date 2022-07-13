@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wendy Taylor - Login</title>
+    <link rel='stylesheet' href='/stylesheets/loginCadastro.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/header.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  </head>
+  <body>
+    
+      <div id="modal-login" class="modal-container">
+
+        <div class="modal-card">
+          <form method="post">
+            <h1>Login :D</h1>
+            <div id="msgError"></div>
+            <div class="label-float">
+              <input type="text" id="usuario" placeholder="" required>
+              <label for="usuario" id="userLabel">Usuario</label>
+            </div>
+    
+            <div class="label-float">
+              <input type="password" id="senha" placeholder="" required>
+              <label for="senha" id="senhaLabel">Senha</label>
+              <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+    
+            <div class="justify-center">
+              <a id="btnLogin">Entrar</a>
+            </div>
+    
+            <div class="justify-center">
+              <hr>
+            </div>
+    
+            <p>Não tem uma conta?
+              <a href="/cadastro">Cadastre-se!</a>
+            </p>
+        </form>
+        </div>
+    
+      </div>
+
+  <div class="id-footer f-cad">
+    <%- include('./partials/footer.ejs') %>
+  </div>
+  </body>
+<script src="javascripts/userLogin.js"></script>
+</html>

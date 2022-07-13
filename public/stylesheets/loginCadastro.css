@@ -1,0 +1,160 @@
+/* LOGIN e CADASTRO */
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-image: url('/images/bg3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container-cad{
+    background-image: url('/images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal-card {
+    position: relative;
+    min-width: 300px;
+    background-color: #ffffff90;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 5px 4px 1px 0px #00000050;
+}
+
+@keyframes modal-card {
+    from{
+        opacity: 0;
+        transform: translate(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0, 0, 0);
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: rgba(0, 0, 0, 0.801);
+}
+
+.label-float input {
+    width: 100%;
+    padding: 5px;
+    display: inline-block; /*NADA MAIS OCUPA A LINHA APENAS ESTE OBJETO*/
+    border: 0;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 15px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.label-float input:focus {
+    border-bottom: 2px solid black;
+}
+
+.label-float label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+    font-size: 13px;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label {
+    font-size: 13px;
+    margin-top: 0;
+}
+
+.justify-center #btnCad, #btnLogin{
+    background-color: transparent;
+    border: solid 1px black;
+    padding: 12px;
+    font-weight: 8px;
+    font-size: 1rem;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s ease-out;
+
+}
+
+.justify-center #btnCad:hover, #btnLogin:hover {
+    border: none;
+    border-top:  3px solid #000;
+    background-color: rgba(205, 148, 216, 0);
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-family: 'WT', 'Times New Roman', Times, serif;
+    
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+hr{
+    margin-top: 10%;
+}
+
+.modal-card a {
+    font-weight: bold;
+    transition: all .3s ease-out;
+}
+
+.modal-card a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.fa-eye {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+
+#msgError{
+    text-align: center;
+    color: red;
+    background-color: #ffbbbb;
+    border-radius: 5px;
+    display: none;
+    font-size: 12px;
+    padding: 22px;
+}
+
+#msgSucess{
+    text-align: center;
+    color: green;
+    background-color: #c1ffbb;
+    border-radius: 5px;
+    display: none;
+    font-size: 12px;
+    padding: 22px;
+}

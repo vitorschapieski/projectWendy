@@ -1,0 +1,255 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.left{
+    background-color: rgb(255, 255, 255);
+    height: 25%;
+    width: 100%;
+    max-height: 200px;
+    min-height: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+/*TOP DO USUARIO*/
+#picture__input{
+    display: none;
+}
+.person{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.picture{
+    height: 160px;
+    width: 160px;
+    border-radius: 25px;
+    background-image: url(/images/photo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+
+.picture:hover{
+    border: 1px solid gray;
+    box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.507);
+}
+
+.picture__img{
+    max-width: 100%;
+}
+
+#nomeUsuario{
+    margin-top: 15px;
+    font-size: 19px;
+}
+
+/*MENU BOTOES*/
+#u-sair{
+    cursor: pointer;
+}
+
+.left nav{
+    width: 150px;
+    text-align: center;
+    padding: 15px;
+    
+}
+.left nav ul{
+    width: 280px;
+    display: flex;
+    background-color:transparent;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 5;
+    margin-top: 5px;
+    margin-right: 25px;
+}
+.left nav ul li{
+    text-decoration: none;
+    font-style: none;
+    list-style: none;
+    padding: 5px;
+    width: 100%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.left nav ul li:hover{
+    background-color: rgba(128, 128, 128, 0.205);
+    border-radius: 90px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.288);
+}
+.left nav ul li a{
+    font-size: 14px;
+}
+
+/* CORPO DA PAIGINA*/
+.right{
+    background-color: rgba(133, 69, 194, 0);
+    height: 100vh;
+    width: 100vw;
+    border-left: 1px solid rgba(0, 0, 0, 0.116);
+    display: flex;
+    flex-wrap: wrap;
+}
+/**/
+#inicio{
+    border-top: 1px soslid rgba(0, 0, 0, 0.712);
+    width: 95%;
+    height: calc(100vh - 120px);
+    background-color: rgba(196, 199, 199, 0.664);
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 25px 25px 0 0;
+}
+/* ADD PRODUTO*/
+.addProduto{
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.493);
+    height: 350px;
+    width: 200px;
+    border-radius: 11px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    margin-top: 30px;
+}
+.addProduto p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.801);
+}
+.addProduto form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.label-float input, textarea {
+    width: 150px;
+    padding: 5px;
+    display: inline-block; /*NADA MAIS OCUPA A LINHA APENAS ESTE OBJETO*/
+    border: 0;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    font-size: 15px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    width: 150px;
+}
+
+.label-float input:focus, textarea:focus {
+    border-bottom: 2px solid black;
+}
+
+.label-float label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+    font-size: 13px;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label,
+.label-float textarea:focus + label,
+.label-float textarea:valid + label {
+    font-size: 13px;
+    margin-top: 0;
+}
+#formTexto{
+    height: 80px;
+    resize: none;
+    overflow: auto;
+}
+
+
+
+
+::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.addProduto form{
+}
+
+
+
+
+/**/
+#produtos{
+    background-color: rgb(255, 255, 255);
+    height: 1500px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    overflow: auto;
+}
+#produto{
+    width: 150px;
+    height: 350px;
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.473);
+    border-radius: 5px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.425);
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.img{
+    weight: 100px;
+    height: 150px;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+#produto h5, p, label{
+    text-align: center;
+    font-size: 15px;
+}
+#painel{
+    background-color: gray;
+    width: 100%;
+    height: 800px;
+}
+
+
+
+
+
+
+
